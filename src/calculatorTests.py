@@ -33,5 +33,12 @@ class MyTestCase(unittest.TestCase):
             self.assertEqual(self.calculator.mul(row['Value 1'], row['Value 2']), int(row['Result']))
             self.assertEqual(self.calculator.result, int(row['Result']))
 
+    def test_div_method_calculator(self):
+        test_data_div = CSVReader("C:/Users/sahil/PycharmProjects/CalculatorPythonProject_1/src/UnitTest_Division.csv").data
+        for row in test_data_div:
+            result = float(row['Result'])
+            self.assertEqual(self.calculator.div(row['Value 1'], row['Value 2']), float(row['Result']))
+            self.assertEqual(self.calculator.result, float(row['Result']))
+
 if __name__ == '__main__':
     unittest.main()
