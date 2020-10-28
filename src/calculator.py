@@ -4,6 +4,9 @@ def addition(a, b):
 def subtraction(a, b):
     return b - a
 
+def multiplication(a, b):
+    return b * a
+
 
 class calculator:
     result = 0
@@ -21,4 +24,10 @@ class calculator:
         x = int(x)
         y = int(y)
         self.result = subtraction(x, y)
+        return self.result
+
+    def mul(self, x, y):
+        x = int(x)
+        y = int(y)
+        self.result = multiplication(x, y)
         return self.result
