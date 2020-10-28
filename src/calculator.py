@@ -10,6 +10,9 @@ def multiplication(a, b):
 def division(a, b):
     return round(b / a, 9)
 
+def square(a):
+    return a * a
+
 class calculator:
     result = 0
 
@@ -38,4 +41,9 @@ class calculator:
         x = float(x)
         y = float(y)
         self.result = division(x, y)
+        return self.result
+
+    def squ(self, x):
+        x = int(x)
+        self.result = square(x)
         return self.result
