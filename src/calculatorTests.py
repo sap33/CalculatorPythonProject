@@ -19,6 +19,13 @@ class MyTestCase(unittest.TestCase):
             self.assertEqual(self.calculator.add(row['Value 1'], row['Value 2']), int(row['Result']))
             self.assertEqual(self.calculator.result, int(row['Result']))
 
+    def test_sub_method_calculator(self):
+        test_data_sub = CSVReader("C:/Users/sahil/PycharmProjects/CalculatorPythonProject_1/src/UnitTest_Subtraction.csv").data
+        for row in test_data_sub:
+            result = int(row['Result'])
+            self.assertEqual(self.calculator.sub(row['Value 1'], row['Value 2']), int(row['Result']))
+            self.assertEqual(self.calculator.result, int(row['Result']))
+
 
 if __name__ == '__main__':
     unittest.main()
